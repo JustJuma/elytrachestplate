@@ -1,5 +1,5 @@
 name: ElytraChest
-version: 1.0.0
+version: 1.0.1
 main: net.plugin.elytrachest.ElytraChest
 api-version: "1.21"
 description: Combine a chestplate and elytra in an anvil for 30 levels

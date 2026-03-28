@@ -1,5 +1,8 @@
 package net.plugin.elytrachest;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.EventHandler;
@@ -9,6 +12,7 @@ import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.List;
 import java.util.Map;
 
 public class AnvilListener implements Listener {
@@ -55,6 +59,11 @@ public class AnvilListener implements Listener {
         ItemMeta meta = result.getItemMeta();
         if (meta != null) {
             meta.setGlider(true);
+            meta.lore(List.of(
+                Component.text("[Elytra]")
+                    .color(NamedTextColor.GRAY)
+                    .decoration(TextDecoration.ITALIC, false)
+            ));
             result.setItemMeta(meta);
         }
 
